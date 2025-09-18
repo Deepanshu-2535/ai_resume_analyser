@@ -58,48 +58,46 @@ const Signup = () => {
     }
   return (
     <div className='min-h-screen flex items-center justify-center -z-1 bg-[url("src/images/background.png")]'>
-        <div className='container mx-auto my-auto bg-base-200/60 w-3xl py-8 px-16 rounded-3xl border-2 border-accent'>
-            <h2 className='text-center text-3xl text-base-content mb-5'>Sign Up</h2>
-            <div className='bg-base-300/60 rounded-3xl py-8 px-28 w-full'>
-                <div className='container flex items-center mb-5 justify-between w-full'>
-                    <label className='label mr-6'>
-                    <span className='labe-text'>User ID:</span>
-                    </label>
-                    <input type="text" className='input input-sm rounded-2xl' value={userId} onChange={(e)=>setUserId(e.target.value)} />
+            <div className='min-h-screen min-w-[60%] items-center justify-center hidden md:flex'>
+                <div className='px-10'>
+                    <h1 className='text-7xl text-white font-sans font-bold text-center mb-7'>Sign up</h1>
+                    <p className='text-white/80 font-sans font-light text-center'>Join thousands of professionals who are landing their dream jobs. Our AI resume analyzer provides instant, personalized feedback to help you stand out. Sign up today and get your free resume analysis!</p>
                 </div>
-                <div className='flex mb-5 justify-between'>
-                      <label className='label mr-3'>
-                      <span className='labe-text'>Password:</span>
-                      </label>
-                      <div className='input input-sm rounded-2xl'>
-                        <input type={visible?"text":"password"} className='input input-sm rounded-2xl border-none focus:border-none focus:outline-none' value={password} onChange={(e)=>setPassword(e.target.value)} />
-                        <div className='flex items-center'>
-                          <button className='btn btn-ghost btn-circle hover:bg-base-300/50 hover:outline-none hover:border-none' onClick={toggleVisibility}>
-                            {visible?<EyeOff className='text-base-content/50 size-4 m-0' />:<Eye className='text-base-content/50 size-4 m-0'/>}
-                          </button>
+            </div>
+            <div className='min-h-screen min-w-[40%] bg-base-100 p-30'>
+                <div className='mb-20'>
+                    <h2 className='text-4xl text-left text-base-content font-sans underline'>Sign Up</h2>
+                </div>
+                <div>
+                    <label className='label mb-1'>User Id</label>
+                    <br />
+                    <input type="text" className='input focus:border-none mb-3 w-xs' onChange={(e)=>setUserId(e.target.value)}/>
+                    <br />
+                    <label className='label mb-1'>Password</label>
+                    <br />
+                    <div className='input focus:border-0 mb-3 w-xs'>
+                        <input type={visible?"text":"password"} className='input focus:border-none focus:outline-none' onChange={(e)=>setPassword(e.target.value)}/>
+                        <div>
+                            <button className='btn btn-ghost btn-circle hover:bg-base-200/60 hover:border-0 hover:outline-0' onClick={toggleVisibility}>
+                                {visible?<EyeOff className='text-base-content/50 m-0'/>:<Eye className='text-base-content/50 m-0'/>}
+                            </button>
                         </div>
-                      </div>
-                </div>
-                <div className='w-full flex items-center mb-5 justify-between'>
-                    <label className='label mr-3'>
-                    <span className='labe-text'>Name:</span>
-                    </label>
-                    <input type="text" className='input input-sm rounded-2xl' value={name} onChange={(e)=>setName(e.target.value)} />
-                </div>
-                <div className='w-full flex items-center mb-5 justify-between'>
-                    <label className='label mr-3'>
-                    <span className='labe-text'>Email:</span>
-                    </label>
-                    <input type="text" className='input input-sm rounded-2xl' value={email} onChange={(e)=>setEmail(e.target.value)} />
-                </div>
-                <div className='w-full flex items-center justify-center mt-3'>
-                    <button className='btn btn-secondary btn-wide rounded-3xl text-secondary-content' disabled={signingUp} onClick={handleSubmit}>
-                        {signingUp?"Signing Up...":"Sign Up"}
+                    </div>
+                    <br />
+                    <label className='label mb-1'>Name</label>
+                    <br />
+                    <input type="text" className='input focus:border-none mb-3 w-xs' onChange={(e)=>setName(e.target.value)}/>
+                    <br />
+                    <label className='label mb-1'>Email Id</label>
+                    <br />
+                    <input type="text" className='input focus:border-none mb-10 w-xs' onChange={(e)=>setEmail(e.target.value)}/>
+                    <br />
+                    <button className='btn btn-primary w-xs mb-3' disabled={signingUp} onClick={handleSubmit}>
+                        {signingUp?"Signing Up...":"Sign up"}
                     </button>
                 </div>
             </div>
         </div>
-    </div>
   )
 }
 

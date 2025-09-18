@@ -3,7 +3,6 @@ import {useNavigate} from 'react-router'
 import {Eye,EyeOff} from 'lucide-react';
 import api from '../lib/axios.js';
 import toast from 'react-hot-toast'
-import axios from 'axios';
 const Home = () => {
     const navigate = useNavigate();
     const[userId,setUserId] = useState("");
@@ -44,38 +43,42 @@ const Home = () => {
     }
   return (
     <div className='min-h-screen flex items-center justify-center -z-1 bg-[url("src/images/background.png")]'>
-        <div className='container mx-auto my-auto bg-base-200/60 w-3xl py-8 px-16 rounded-3xl border-2 border-accent'>
-            <h2 className='text-center text-3xl text-base-content mb-5'>Login</h2>
-            <div className='bg-base-300/60 rounded-3xl py-8 px-28'>
-                <div className='w-full flex items-center mb-5 justify-between'>
-                    <label className='label mr-6'>
-                    <span className='labe-text'>User ID:</span>
-                    </label>
-                    <input type="text" className='input input-sm rounded-2xl' onChange={(e)=>setUserId(e.target.value)} />
+        <div className='min-h-screen min-w-[60%] items-center justify-center hidden md:flex'>
+            <div className='px-10'>
+                <h1 className='text-7xl text-white font-sans font-bold text-center mb-7'>AI Powered Resume Analyzer</h1>
+                <p className='text-white/80 font-sans font-light text-center'>We're excited to see you're continuing on your journey to land that next great opportunity. Our AI-powered analysis is ready to pick up right where you left off, providing you with the insights you need to perfect your resume and get noticed by recruiters. Let's get to work and make your resume stand out from the rest.</p>
+            </div>
+        </div>
+        <div className='min-h-screen min-w-[40%] bg-base-100 p-30'>
+            <div className='md:hidden mb-5'>
+                <h2 className='text-4xl text-left text-base-content font-sans'>AI Powered Resume Analyser</h2>
+            </div>
+            <div className='mb-20'>
+                <h2 className='text-4xl text-left text-base-content font-sans underline'>Log In</h2>
+            </div>
+            <div>
+                <label className='label mb-1'>User Id</label>
+                <br />
+                <input type="text" className='input focus:border-none mb-3 w-xs' onChange={(e)=>setUserId(e.target.value)}/>
+                <br />
+                <label className='label mb-1'>Password</label>
+                <br />
+                <div className='input focus:border-0 mb-10 w-xs'>
+                    <input type={visible?"text":"password"} className='input focus:border-none focus:outline-none' onChange={(e)=>setPassword(e.target.value)}/>
+                    <div>
+                        <button className='btn btn-ghost btn-circle hover:bg-base-200/60 hover:border-0 hover:outline-0' onClick={toggleVisibility}>
+                            {visible?<EyeOff className='text-base-content/50 m-0'/>:<Eye className='text-base-content/50 m-0'/>}
+                        </button>
+                    </div>
                 </div>
-                <div className='w-full flex items-center justify-between'>
-                    <label className='label mr-3'>
-                    <span className='labe-text'>Password:</span>
-                    </label>
-                    <div className='input input-sm rounded-2xl'>
-                        <input type={visible?"text":"password"} className='input input-sm rounded-2xl border-none focus:border-none focus:outline-none' onChange={(e)=>setPassword(e.target.value)} />
-                        <div className='flex items-center'>
-                          <button className='btn btn-ghost btn-circle hover:bg-base-300/50 hover:outline-none hover:border-none' onClick={toggleVisibility}>
-                            {visible?<EyeOff className='text-base-content/50 size-4 m-0' />:<Eye className='text-base-content/50 size-4 m-0'/>}
-                          </button>
-                        </div>
-                      </div>
-                </div>
-                <div className='w-full flex items-center justify-center mt-5'>
-                    <button className='btn btn-primary btn-wide rounded-3xl text-primary-content' disabled={loggingIn} onClick={handleSubmit}>
-                        {loggingIn?"Logging In...":"Log In"}
-                    </button>
-                </div>
-                <div className='w-full flex items-center justify-center mt-3'>
-                    <button className='btn btn-secondary btn-wide rounded-3xl text-secondary-content' onClick={()=>{navigate('/signup')}}>
-                        Sign Up
-                    </button>
-                </div>
+                <br />
+                <button className='btn btn-primary w-xs mb-3' disabled={loggingIn} onClick={handleSubmit}>
+                    {loggingIn?"Logging In...":"Log In"}
+                </button>
+                <br />
+                <button className='btn btn-secondary w-xs' onClick={()=>{navigate('/signup')}}>
+                    Sign Up
+                </button>
             </div>
         </div>
     </div>

@@ -1,7 +1,6 @@
 import Auth from "../models/Auth.js";
 export async function getAuthDetails(req,res){
     try{
-        console.log(req.params.userId);
         const authDetails = await Auth.findOne({userId:req.params.userId});
         res.status(200).json(authDetails);
     }
