@@ -4,7 +4,7 @@ import {Eye,EyeOff} from 'lucide-react';
 import { useNavigate } from 'react-router';
 import api from '../lib/axios.js';
 
-const Signup = () => {
+const Signup = ({setIsLoggedIn}) => {
     const[userId,setUserId] = useState("");
     const[password,setPassword] = useState("");
     const[name,setName] = useState("");
@@ -51,6 +51,7 @@ const Signup = () => {
         }
         finally{
             setSigningUp(false);
+            setIsLoggedIn(true);
         }
     }
     const toggleVisibility = ()=>{

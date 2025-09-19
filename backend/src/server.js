@@ -1,5 +1,6 @@
 import express from "express"
 import authRoutes from "./routes/authRoutes.js"
+import resumeRoutes from "./routes/resumeRoutes.js"
 import { connectDB } from "./config/db.js";
 import dotenv from "dotenv";
 import cors from "cors"
@@ -10,6 +11,7 @@ const PORT= process.env.PORT || 5001;
 app.use(cors());
 app.use(express.json());
 app.use('/api/auth',authRoutes);
+app.use('/api/resume',resumeRoutes);
 
 connectDB().then(()=>{
     app.listen(PORT,()=>{

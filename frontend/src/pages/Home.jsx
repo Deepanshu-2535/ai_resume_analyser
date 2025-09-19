@@ -3,7 +3,7 @@ import {useNavigate} from 'react-router'
 import {Eye,EyeOff} from 'lucide-react';
 import api from '../lib/axios.js';
 import toast from 'react-hot-toast'
-const Home = () => {
+const Home = ({setIsLoggedIn}) => {
     const navigate = useNavigate();
     const[userId,setUserId] = useState("");
     const[password,setPassword] = useState("");
@@ -36,6 +36,7 @@ const Home = () => {
         }
         finally{
             setLoggingIn(false);
+            setIsLoggedIn(true);
         }
     }
     const toggleVisibility = ()=>{
