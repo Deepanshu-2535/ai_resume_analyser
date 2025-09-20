@@ -1,7 +1,7 @@
 import { Trash2Icon } from 'lucide-react';
 import React from 'react'
 import { Link, useParams } from 'react-router'
-import { formatDate } from '../../../../Notes app/Frontend/src/lib/util';
+import { formatDate } from '../lib/util.js';
 import api from '../lib/axios';
 import toast from 'react-hot-toast';
 import ScoreCircle from './ScoreCircle';
