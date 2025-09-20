@@ -43,7 +43,7 @@ const Home = ({setIsLoggedIn}) => {
         setVisible(v=>!v);
     }
   return (
-    <div className='min-h-screen flex items-center justify-center -z-1 bg-[url("src/images/background.png")]'>
+    <div className='min-h-screen flex items-center justify-center -z-1 bg-[url("./images/background.png")]'>
         <div className='min-h-screen min-w-[60%] items-center justify-center hidden md:flex'>
             <div className='px-10'>
                 <h1 className='text-7xl text-white font-sans font-bold text-center mb-7'>AI Powered Resume Analyzer</h1>

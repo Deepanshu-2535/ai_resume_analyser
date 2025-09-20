@@ -1,8 +1,8 @@
 import React, { useState, useCallback } from 'react'
 import {useDropzone} from 'react-dropzone'
 import {FileCheck, Upload} from 'lucide-react';
-import {GoogleGenAI, Type} from '@google/genai';
 import api from '../lib/axios';
+import Navbar from '../components/Navbar'
 import { useNavigate, useParams } from 'react-router';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import toast from 'react-hot-toast';
@@ -52,6 +52,9 @@ const CreatePage = () => {
   }
   if(processing){
     return(
+    <div>
+      <Navbar/>
+      <div className='divider'></div>
       <div className='p-15'>
         <div className='p-30 rounded-2xl border-2 border-neutral-content/20 shadow-neutral-content/20 shadow-xl text-primary flex items-center justify-center'>
         <div>
@@ -65,6 +68,7 @@ const CreatePage = () => {
           </div>
         </div>
       </div>
+    </div>
     )
   }
   return (
