@@ -14,7 +14,6 @@ const fileToBase64 = (file) => new Promise((resolve, reject) => {
 });
 
 const CreatePage = () => {
-  const ai = new GoogleGenAI({apiKey:'AIzaSyD2Nj06FTzP8ThXov_fkyKP4f0yV61F16A'});
   const {userId} = useParams();
   const[companyName,setCompanyName] = useState("");
   const[jobTitle,setJobTitle] = useState("");
