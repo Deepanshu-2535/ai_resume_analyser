@@ -13,7 +13,7 @@ const ResumeCard = ({resume,setResumes}) => {
         e.preventDefault();
         try{
             await api.delete(`/resume/${resume._id}`)
-            toast.success("Note Successfully Deleted");
+            toast.success("Resume Successfully Deleted");
             setResumes((prev)=>prev.filter(temp=>temp._id!==resume._id));
         }
         catch(error){
