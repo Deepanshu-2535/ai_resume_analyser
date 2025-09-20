@@ -17,10 +17,34 @@ const resumeSchema = new mongoose.Schema({
         required:true
     },
     score:{
-        type:Number,
+        type:Number
     },
     suggestions:{
-        type:Array,
+        type:Array
+    },
+    toneAndStyleScore:{
+        type:Number
+    },
+    toneAndStyleTips:{
+        type:Array
+    },
+    contentScore:{
+        type:Number
+    },
+    contentTips:{
+        type:Array
+    },
+    structureScore:{
+        type:Number
+    },
+    structureTips:{
+        type:Array
+    },
+    skillsScore:{
+        type:Number
+    },
+    skillsTips:{
+        type:Array
     }
 },{timestamps:true})
 

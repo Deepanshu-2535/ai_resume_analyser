@@ -20,9 +20,9 @@ export async function getOneResume(req,res) {
     }
 }
 export async function addResume(req,res) {
-    const{userId,companyName,jobTitle,jobDescription} = req.body; 
+    const{userId,companyName,jobTitle,jobDescription,score,suggestions,toneAndStyleScore,toneAndStyleTips,contentScore,contentTips,skillsScore,skillsTips,structureScore,structureTips} = req.body; 
     try{
-        const newResume = new Resume({userId,companyName,jobTitle,jobDescription});
+        const newResume = new Resume({userId,companyName,jobTitle,jobDescription,score,suggestions,toneAndStyleScore,toneAndStyleTips,contentScore,contentTips,skillsScore,skillsTips,structureScore,structureTips});
         const savedResume = await newResume.save();
         res.status(201).json(savedResume);
     }

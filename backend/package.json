@@ -15,6 +15,7 @@
     "nodemon": "^3.1.10"
   },
   "dependencies": {
+    "@google/genai": "^1.20.0",
     "@upstash/ratelimit": "^2.0.6",
     "@upstash/redis": "^1.35.3",
     "cors": "^2.8.5",

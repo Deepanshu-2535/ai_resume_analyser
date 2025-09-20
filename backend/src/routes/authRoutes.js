@@ -4,5 +4,5 @@ const router = express.Router();
 router.get('/:userId',getAuthDetails);
 router.post('/',addAuthDetails);
 router.put('/',updateAuthDetails);
-router.delete('/',deleteAuthDetails);
+router.delete('/:userId',deleteAuthDetails);
 export default router;

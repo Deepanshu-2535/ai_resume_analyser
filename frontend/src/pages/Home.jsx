@@ -51,16 +51,16 @@ const Home = ({setIsLoggedIn}) => {
             </div>
         </div>
         <div className='min-h-screen min-w-[40%] bg-base-100 p-30'>
-            <div className='md:hidden mb-5'>
-                <h2 className='text-4xl text-left text-base-content font-sans'>AI Powered Resume Analyser</h2>
-            </div>
             <div className='mb-20'>
-                <h2 className='text-4xl text-left text-base-content font-sans underline'>Log In</h2>
+            <div className='flex items-center justify-center md:hidden p-0 m-0'>
+                <h2 className='md:hidden mb-5 text-4xl text-center text-base-content font-sans w-80 m-0'>AI Powered Resume Analyser</h2>
+            </div>
+                <h2 className='text-4xl text-center md:text-left text-base-content font-sans underline'>Log In</h2>
             </div>
             <div>
                 <label className='label mb-1'>User Id</label>
                 <br />
-                <input type="text" className='input focus:border-none mb-3 w-xs' onChange={(e)=>setUserId(e.target.value)}/>
+                <input type="text" className='input focus:border-none mb-3 w-xs' onChange={(e)=>setUserId(e.target.value)} />
                 <br />
                 <label className='label mb-1'>Password</label>
                 <br />

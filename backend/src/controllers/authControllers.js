@@ -41,7 +41,7 @@ export async function updateAuthDetails(req,res) {
 }
 
 export async function deleteAuthDetails(req,res) {
-    const {userId} = req.body;
+    const {userId} = req.params;
     const deletedNote = await Auth.findOneAndDelete({userId});
     if(!deletedNote){
         res.status(404).json({message:"User not found"});
