@@ -67,16 +67,16 @@ const Signup = ({setIsLoggedIn}) => {
             </div>
             <div className='min-h-screen min-w-screen md:min-w-[40%] bg-base-100 p-10 py-28 md:p-30'>
                 <div className='mb-20'>
-                    <h2 className='text-4xl text-left text-base-content font-sans underline'>Sign Up</h2>
+                    <h2 className='text-4xl text-left text-base-content font-sans underline mx-4 md:mx-0'>Sign Up</h2>
                 </div>
-                <div>
+                <div className='mx-4 md:mx-0'>
                     <label className='label mb-1'>User Id</label>
                     <br />
-                    <input type="text" className='input focus:border-none mb-3 w-xs' onChange={(e)=>setUserId(e.target.value)}/>
+                    <input type="text" className='input focus:border-none mb-3 w-full md:w-xs' onChange={(e)=>setUserId(e.target.value)}/>
                     <br />
                     <label className='label mb-1'>Password</label>
                     <br />
-                    <div className='input focus:border-0 mb-3 w-xs'>
+                    <div className='input focus:border-0 mb-3 w-full md:w-xs'>
                         <input type={visible?"text":"password"} className='input focus:border-none focus:outline-none' onChange={(e)=>setPassword(e.target.value)}/>
                         <div>
                             <button className='btn btn-ghost btn-circle hover:bg-base-200/60 hover:border-0 hover:outline-0' onClick={toggleVisibility}>
@@ -87,13 +87,13 @@ const Signup = ({setIsLoggedIn}) => {
                     <br />
                     <label className='label mb-1'>Name</label>
                     <br />
-                    <input type="text" className='input focus:border-none mb-3 w-xs' onChange={(e)=>setName(e.target.value)}/>
+                    <input type="text" className='input focus:border-none mb-3 w-full md:w-xs' onChange={(e)=>setName(e.target.value)}/>
                     <br />
                     <label className='label mb-1'>Email Id</label>
                     <br />
-                    <input type="text" className='input focus:border-none mb-10 w-xs' onChange={(e)=>setEmail(e.target.value)}/>
+                    <input type="text" className='input focus:border-none mb-10 w-full md:w-xs' onChange={(e)=>setEmail(e.target.value)}/>
                     <br />
-                    <button className='btn btn-primary w-xs mb-3' disabled={signingUp} onClick={handleSubmit}>
+                    <button className='btn btn-primary w-full md:w-xs mb-3' disabled={signingUp} onClick={handleSubmit}>
                         {signingUp?"Signing Up...":"Sign up"}
                     </button>
                 </div>

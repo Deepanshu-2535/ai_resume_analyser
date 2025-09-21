@@ -52,19 +52,19 @@ const Home = ({setIsLoggedIn}) => {
         </div>
         <div className='min-h-screen min-w-screen md:min-w-[40%] bg-base-100 p-10 py-28 md:p-30'>
             <div className='mb-20'>
-            <div className='flex items-center justify-center md:hidden p-0 m-0'>
-                <h2 className='md:hidden mb-5 text-4xl text-center text-base-content font-sans w-80 m-0'>AI Powered Resume Analyser</h2>
-            </div>
+                <div className='flex items-center justify-center md:hidden p-0 m-0'>
+                    <h2 className='md:hidden mb-5 text-4xl text-center text-base-content font-sans w-80 m-0'>AI Powered Resume Analyser</h2>
+                </div>
                 <h2 className='text-4xl text-center md:text-left text-base-content font-sans underline'>Log In</h2>
             </div>
-            <div>
+            <div className='m-4 md:mx-0'>
                 <label className='label mb-1'>User Id</label>
                 <br />
-                <input type="text" className='input focus:border-none mb-3 w-xs' onChange={(e)=>setUserId(e.target.value)} />
+                <input type="text" className='input focus:border-none mb-3 w-full md:w-xs' onChange={(e)=>setUserId(e.target.value)} />
                 <br />
                 <label className='label mb-1'>Password</label>
                 <br />
-                <div className='input focus:border-0 mb-10 w-xs'>
+                <div className='input focus:border-0 mb-10 w-full md:w-xs'>
                     <input type={visible?"text":"password"} className='input focus:border-none focus:outline-none' onChange={(e)=>setPassword(e.target.value)}/>
                     <div>
                         <button className='btn btn-ghost btn-circle hover:bg-base-200/60 hover:border-0 hover:outline-0' onClick={toggleVisibility}>
@@ -73,11 +73,11 @@ const Home = ({setIsLoggedIn}) => {
                     </div>
                 </div>
                 <br />
-                <button className='btn btn-primary w-xs mb-3' disabled={loggingIn} onClick={handleSubmit}>
+                <button className='btn btn-primary w-full md:w-xs mb-3' disabled={loggingIn} onClick={handleSubmit}>
                     {loggingIn?"Logging In...":"Log In"}
                 </button>
                 <br />
-                <button className='btn btn-secondary w-xs' onClick={()=>{navigate('/signup')}}>
+                <button className='btn btn-secondary w-full md:w-xs' onClick={()=>{navigate('/signup')}}>
                     Sign Up
                 </button>
             </div>
