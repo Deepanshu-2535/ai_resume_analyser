@@ -86,7 +86,7 @@ const CreatePage = () => {
           <div className='flex items-center justify-center my-5'>
             <div className='flex items-center justify-between w-full md:w-[60%] lg:w-[40%]'>
               <label className='label'>Job Title :</label>
-              <input type='text' className='input focus:border-0 ml-2' onChange={(e)=>setJobTitle(e.target.value)}></input>
+              <input type='text' className='input focus:border-0 ml-13 md:ml-2' onChange={(e)=>setJobTitle(e.target.value)}></input>
             </div>
           </div>
           <div className='flex items-center justify-center my-5'>
