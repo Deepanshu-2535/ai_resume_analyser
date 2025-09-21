@@ -55,8 +55,8 @@ const CreatePage = () => {
     <div>
       <Navbar/>
       <div className='divider'></div>
-      <div className='p-15'>
-        <div className='p-30 rounded-2xl border-2 border-neutral-content/20 shadow-neutral-content/20 shadow-xl text-primary flex items-center justify-center'>
+      <div className='p-5 md:p-15'>
+        <div className='p-10 md:p-30 rounded-2xl border-2 border-neutral-content/20 shadow-neutral-content/20 shadow-xl text-primary flex items-center justify-center'>
         <div>
           <DotLottieReact className='w-150 m-0'
             src="https://lottie.host/29d88a63-39a3-4b0d-9d6c-f2a7f27d4e83/3g30toMGfs.lottie"
@@ -74,33 +74,33 @@ const CreatePage = () => {
   return (
     <div>
       <div className='text-3xl font-bold text-neutral-content font-sans text-center bg-neutral flex items-center justify-center py-6'>Upload Your Resume</div>
-      <div className='py-5 p-10'>
+      <div className='py-5 p-3 md:p-10'>
         <div className='divider'></div>
-        <div className='p-5 rounded-2xl border-2 border-neutral-content/20 shadow-neutral-content/20 shadow-xl text-primary'>
+        <div className='px-5 py-3 md:p-5 rounded-2xl border-2 border-neutral-content/20 shadow-neutral-content/20 shadow-xl text-primary'>
           <div className='flex items-center justify-center my-5'>
-            <div className='flex items-center justify-between w-[70%] md:w-[60%] lg:w-[40%]'>
+            <div className='flex items-center justify-between w-full  md:w-[60%] lg:w-[40%]'>
               <label className='label'>Company Name :</label>
               <input type='text' className='input focus:border-0 ml-2' onChange={(e)=>setCompanyName(e.target.value)}></input>
             </div>
           </div>
           <div className='flex items-center justify-center my-5'>
-            <div className='flex items-center justify-between w-[70%] md:w-[60%] lg:w-[40%]'>
+            <div className='flex items-center justify-between w-full md:w-[60%] lg:w-[40%]'>
               <label className='label'>Job Title :</label>
               <input type='text' className='input focus:border-0 ml-2' onChange={(e)=>setJobTitle(e.target.value)}></input>
             </div>
           </div>
           <div className='flex items-center justify-center my-5'>
-            <div className='flex items-center justify-between w-[70%] md:w-[60%] lg:w-[40%]'>
+            <div className='flex items-center justify-between w-full md:w-[60%] lg:w-[40%]'>
               <label className='label'>Job Descrption :</label>
               <textarea className='textarea focus:border-0 ml-2' onChange={(e)=>setJobDescription(e.target.value)}></textarea>
             </div>
           </div>
           <div className='flex items-center justify-center my-5'>
-            <div className='flex items-center justify-between w-[70%] md:w-[60%] lg:w-[40%]'>
+            <div className='flex items-center justify-between w-full md:w-[60%] lg:w-[40%]'>
               <label className='label'>Resume :</label>
                 <div {...getRootProps()}>
                   <input {...getInputProps()} />
-                    <div  className='w-80 textarea p-5'>
+                    <div  className='w-60 md:w-80 textarea p-3 md:p-5'>
                       {
                         resume?
                           (
@@ -113,7 +113,7 @@ const CreatePage = () => {
                               <div className='text-sm font-extralight text-primary/60 text-center'>
                                 Click to select another file
                               </div>
-                              <div className='truncate text-lg font-light text-primary/60 text-center py-0 px-5'>
+                              <div className='truncate text-lg font-light text-primary/60 text-center py-0 p-3 md:px-5'>
                                 {resume.name}
                                 <br />
                                 {Math.round((resume.size/(1024*1024))*100)/100} MB

@@ -39,7 +39,6 @@ const Dashboard = ({isLoggedIn}) => {
       try{
         const res = await api.get(`/auth/${userId}`);
         setUserName(res.data.name);
-        console.log(res.data)
       }
       catch(error){
         console.error(error);
@@ -73,11 +72,11 @@ const Dashboard = ({isLoggedIn}) => {
   return (
     <div>
       <Navbar/>
-      <div className='p-10'>
-        <div className='m-10 ml-0'>
+      <div className='p-2 md:p-10'>
+        <div className='m-5 md:m-10 ml-0'>
           <span className='ml-5 text-3xl font-bold text-primary'>Hello {userName}</span>
         </div>
-        <div className='p-10 rounded-3xl border-2 border-neutral-content/40 shadow-neutral-content/20 shadow-xl '>
+        <div className='p-5 md:p-10 rounded-3xl border-2 border-neutral-content/40 shadow-neutral-content/20 shadow-xl '>
           <span className='ml-3 text-2xl font-semibold text-primary'>Your Saved Resumes</span>
           <div className='divider'></div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>

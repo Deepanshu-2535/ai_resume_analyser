@@ -65,7 +65,7 @@ const Signup = ({setIsLoggedIn}) => {
                     <p className='text-white/80 font-sans font-light text-center'>Join thousands of professionals who are landing their dream jobs. Our AI resume analyzer provides instant, personalized feedback to help you stand out. Sign up today and get your free resume analysis!</p>
                 </div>
             </div>
-            <div className='min-h-screen min-w-[40%] bg-base-100 p-30'>
+            <div className='min-h-screen min-w-screen md:min-w-[40%] bg-base-100 p-10 py-28 md:p-30'>
                 <div className='mb-20'>
                     <h2 className='text-4xl text-left text-base-content font-sans underline'>Sign Up</h2>
                 </div>

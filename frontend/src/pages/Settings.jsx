@@ -57,13 +57,13 @@ const Settings = () => {
   return (
     <div>
         <Navbar/>
-        <div className='p-15'>
-            <div className='p-20 rounded-3xl border-2 border-neutral-content/40 shadow-neutral-content/20 shadow-xl'>
+        <div className='p-5 md:p-15'>
+            <div className='p-10 md:p-20 rounded-3xl border-2 border-neutral-content/40 shadow-neutral-content/20 shadow-xl'>
                 <h3 className='text-2xl text-primary text-left font-bold'>Change Password</h3>
                 <div className='divider'></div>
-                <div className='w-fit'>
-                <label className='label text-lg m-3'>Current Password : </label>
-                <div className='input focus:border-0 m-3 w-xs'>
+                <div className='md:w-fit'>
+                <label className='label text-lg m-1 md:m-3'>Current Password : </label>
+                <div className='input focus:border-0 m-1 md:m-3 w-full md:w-xs'>
                     <input type={currvisible?"text":"password"} className='input focus:border-none focus:outline-none' onChange={(e)=>setCurr(e.target.value)}/>
                     <div>
                         <button className='btn btn-ghost btn-circle hover:bg-base-200/60 hover:border-0 hover:outline-0' onClick={toggleCurrVisibility}>
@@ -72,8 +72,8 @@ const Settings = () => {
                     </div>
                 </div>
                 <br />
-                <label className='label text-lg m-3'>New Password : </label>
-                <div className='input focus:border-0 md:ml-9 m-3 w-xs '>
+                <label className='label text-lg m-1 md:m-3'>New Password : </label>
+                <div className='input focus:border-0 md:ml-9 m-1 md:m-3 w-full md:w-xs '>
                     <input type={newvisible?"text":"password"} className='input focus:border-none focus:outline-none' onChange={(e)=>setNewpass(e.target.value)}/>
                     <div>
                         <button className='btn btn-ghost btn-circle hover:bg-base-200/60 hover:border-0 hover:outline-0' onClick={toggleNewVisibility}>
@@ -82,11 +82,11 @@ const Settings = () => {
                     </div>
                 </div>
                 <br />
-                <button className='btn btn-primary m-3' disabled={loading} onClick={handleChange}>Change Password</button>
+                <button className='btn btn-primary m-1 my-3 md:m-3' disabled={loading} onClick={handleChange}>Change Password</button>
                 </div>
                 <h3 className='text-2xl text-primary text-left font-bold mt-10'>Delete Account</h3>
                 <div className='divider'></div>
-                <button className='btn btn-error btn-soft m-3' disabled={loading} onClick={handleDelete}><Trash2 className='text-red-600/80'/>Delete Account</button>
+                <button className='btn btn-error btn-soft m-1 md:m-3' disabled={loading} onClick={handleDelete}><Trash2 className='text-red-600/80'/>Delete Account</button>
             </div>
         </div>
     </div>
