@@ -46,8 +46,8 @@ const Home = ({setIsLoggedIn}) => {
     <div className='min-h-screen min-w-screen flex items-center justify-center -z-1 bg-[url("./images/background.png")]'>
         <div className='min-h-screen min-w-[60%] items-center justify-center hidden md:flex'>
             <div className='px-10'>
-                <h1 className='text-7xl text-white font-sans font-bold text-center mb-7'>AI Powered Resume Analyzer</h1>
-                <p className='text-white/80 font-sans font-light text-center'>We're excited to see you're continuing on your journey to land that next great opportunity. Our AI-powered analysis is ready to pick up right where you left off, providing you with the insights you need to perfect your resume and get noticed by recruiters. Let's get to work and make your resume stand out from the rest.</p>
+                <h1 className='text-7xl text-white font-sans text-center mb-3'><span className='font-bold text-blue-600'>Resu</span>Metrics</h1>
+                <p className='text-white/80 font-sans text-xl text-center'>AI-Powered Career Insights</p>
             </div>
         </div>
         <div className='min-h-screen min-w-screen md:min-w-[40%] bg-base-100 p-10 py-28 md:p-30'>
