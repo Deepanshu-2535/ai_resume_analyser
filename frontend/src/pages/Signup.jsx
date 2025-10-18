@@ -58,7 +58,7 @@ const Signup = ({setIsLoggedIn}) => {
         setVisible(v=>!v);
     }
   return (
-    <div className='min-h-screen min-w-screen flex items-center justify-center bg-cover -z-1 bg-[url("src/images/login-new.png")]'>
+    <div className='min-h-screen min-w-screen flex items-center justify-center bg-cover -z-1 bg-[url("./images/login-new.png")]'>
             <div className='min-h-screen min-w-[60%] items-center justify-center hidden md:flex'>
                 <div className='px-10'>
                     <h1 className='text-7xl text-black font-sans text-center mb-3'><span className='font-bold text-blue-600'>Resu</span>Metrics</h1>
