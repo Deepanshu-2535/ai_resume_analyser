@@ -73,10 +73,9 @@ const CreatePage = () => {
   }
   return (
     <div>
-      <div className='text-3xl font-bold text-neutral-content font-sans text-center bg-neutral flex items-center justify-center py-6'>Upload Your Resume</div>
-      <div className='py-5 p-3 md:p-10'>
-        <div className='divider'></div>
-        <div className='px-5 py-3 md:p-5 rounded-2xl border-2 border-neutral-content/20 shadow-neutral-content/20 shadow-xl text-primary'>
+      <div className='navbar h-25 text-3xl font-semibold text-black text-center bg-white shadow-2xl flex items-center justify-center py-6'>Upload Your Resume</div>
+      <div className='py-5 p-3 md:p-10 bg-gradient-to-br from-blue-100 to-pink-100 min-h-screen'>
+        <div className='px-5 py-3 md:p-5 rounded-2xl bg-white border-2 border-neutral-content/20 shadow-neutral-content/20 shadow-xl text-primary'>
           <div className='flex items-center justify-center my-5'>
             <div className='flex items-center justify-between w-full  md:w-[60%] lg:w-[40%]'>
               <label className='label'>Company Name :</label>
@@ -106,7 +105,7 @@ const CreatePage = () => {
                           (
                             <div>
                               <div className='flex items-center justify-center'>
-                                <div className='bg-neutral-content rounded-full p-5 w-fit'>
+                                <div className='bg-blue-100 rounded-full p-5 w-fit'>
                                   <FileCheck/>
                                 </div>
                               </div>
@@ -123,7 +122,7 @@ const CreatePage = () => {
                         :(
                           <div>
                             <div className='flex items-center justify-center'>
-                              <div className='bg-neutral-content rounded-full p-5 flex items-center justify-center w-fit'>
+                              <div className='bg-blue-100 rounded-full p-5 flex items-center justify-center w-fit'>
                                 <Upload/>
                               </div>
                             </div>
@@ -144,7 +143,7 @@ const CreatePage = () => {
             </div>
           </div>
           <div className='flex items-center justify-center'>
-            <button className='btn btn-primary' onClick={handleAnalyse}>Analyse Resume</button>
+            <button className='btn bg-blue-600 text-white rounded-full py-5' onClick={handleAnalyse}>Analyse Resume</button>
           </div>
 
         </div>

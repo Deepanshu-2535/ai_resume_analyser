@@ -45,11 +45,11 @@ const DetailPage = () => {
     )
   }
   return (
-    <div>
+    <div className='bg-gradient-to-br from-blue-100 to-pink-100'>
       <Navbar />
       <div><Link to={`/dashboard/${userId}`}><button className='btn btn-ghost text-primary text-lg m-3 md:mb-0 md:ml-15 md:m-5'><ArrowLeft/> Back to resumes</button></Link></div>
       <div className='pt-3 p-3 md:p-15'>
-        <div className='p-3 md:p-10 rounded-3xl border-2 border-neutral-content/40 shadow-neutral-content/20 shadow-xl'>
+        <div className='p-3 md:p-10 rounded-3xl border-2 bg-white border-neutral-content/40 shadow-neutral-content/20 shadow-xl'>
           <div className='flex justify-between items-center'>
             <div className='text-4xl font-bold text-primary'>
               {

@@ -50,9 +50,9 @@ const Dashboard = ({isLoggedIn}) => {
     return(
       <div>
         <Navbar/>
-        <div className='p-10'>
-          <div className='p-10 rounded-3xl border-2 border-neutral-content/40 shadow-neutral-content/20 shadow-xl flex items-center justify-center py-30'>
-            <div className='text-center'>
+        <div className='p-10 bg-gradient-to-br from-blue-100 to-pink-100'>
+          <div className='p-10 bg-white min-h-screen rounded-3xl border-2 border-neutral-content/40 shadow-neutral-content/20 shadow-xl flex items-center justify-center py-30'>
+            <div className='text-center bg-white'>
               <Ring/>
               <p className='text-primary/70 font-light'>Fetching Resumes...</p>
             </div>
@@ -63,7 +63,7 @@ const Dashboard = ({isLoggedIn}) => {
   }
   if(resumes.length===0){
     return(
-      <div>
+      <div className='bg-gradient-to-br from-blue-100 to-pink-100 min-h-screen'>
         <Navbar/>
         <NotFound/>
       </div>
@@ -72,11 +72,11 @@ const Dashboard = ({isLoggedIn}) => {
   return (
     <div>
       <Navbar/>
-      <div className='p-2 md:p-10'>
+      <div className='p-2 md:p-10 bg-gradient-to-br from-blue-100 to-pink-100 min-h-screen'>
         <div className='m-5 md:m-10 ml-0'>
           <span className='ml-5 text-3xl font-bold text-primary'>Hello {userName}</span>
         </div>
-        <div className='p-5 md:p-10 rounded-3xl border-2 border-neutral-content/40 shadow-neutral-content/20 shadow-xl '>
+        <div className='p-5 md:p-10 rounded-3xl border-2 border-neutral-content/40 shadow-neutral-content/20 shadow-xl bg-white '>
           <span className='ml-3 text-2xl font-semibold text-primary'>Your Saved Resumes</span>
           <div className='divider'></div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>

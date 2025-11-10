@@ -7,7 +7,7 @@ const NotFound = () => {
   return (
     <div>
         <div className='p-3 md:p-10'>
-        <div className='p-10 md:p-20 rounded-3xl border-2 border-neutral-content/40 shadow-neutral-content/20 shadow-xl'>
+        <div className='p-10 md:p-20 bg-white rounded-3xl border-2 border-neutral-content/40 shadow-neutral-content/20 shadow-xl'>
             <div className='flex items-center justify-center mb-5'>
                 <div className='bg-secondary-content text-primary rounded-full p-7 max-w-fit'>
                     <ScrollText className='size-10'/>
@@ -18,7 +18,7 @@ const NotFound = () => {
                 <div className='text-primary/80 font-light text-xl mb-5'>Upload your first resume <br />
                 to begin the AI powered analysis journey</div>
                 <Link to ={`/create/${userId}`}>
-                    <button className='btn btn-primary'><PlusCircleIcon/> Upload Resume</button>
+                    <button className='btn bg-blue-600 text-white rounded-full px-5 py-5'><PlusCircleIcon/> Upload Resume</button>
                 </Link>
             </div>
         </div>

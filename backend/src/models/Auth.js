@@ -19,4 +19,4 @@ const authSchema = new mongoose.Schema({
 },{timestamps:true})
 
 const Auth = mongoose.model("Auth",authSchema);
-export default Auth
+export default Auth;

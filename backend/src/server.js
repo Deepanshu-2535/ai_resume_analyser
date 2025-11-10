@@ -32,4 +32,4 @@ connectDB().then(()=>{
     app.listen(PORT,()=>{
     console.log("Server started on PORT 5001")
 })
-});
+})

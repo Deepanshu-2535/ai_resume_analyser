@@ -57,8 +57,8 @@ const Settings = () => {
   return (
     <div>
         <Navbar/>
-        <div className='p-5 md:p-15'>
-            <div className='p-10 md:p-20 rounded-3xl border-2 border-neutral-content/40 shadow-neutral-content/20 shadow-xl'>
+        <div className='p-5 md:p-15 bg-gradient-to-br from-blue-100 to-pink-100'>
+            <div className='bg-white p-10 md:p-20 rounded-3xl border-2 border-neutral-content/40 shadow-neutral-content/20 shadow-xl'>
                 <h3 className='text-2xl text-primary text-left font-bold'>Change Password</h3>
                 <div className='divider'></div>
                 <div className='md:w-fit'>
@@ -82,11 +82,11 @@ const Settings = () => {
                     </div>
                 </div>
                 <br />
-                <button className='btn btn-primary m-1 my-3 md:m-3' disabled={loading} onClick={handleChange}>Change Password</button>
+                <button className='btn bg-blue-600 text-white rounded-full m-1 my-3 md:m-3' disabled={loading} onClick={handleChange}>Change Password</button>
                 </div>
                 <h3 className='text-2xl text-primary text-left font-bold mt-10'>Delete Account</h3>
                 <div className='divider'></div>
-                <button className='btn btn-error btn-soft m-1 md:m-3' disabled={loading} onClick={handleDelete}><Trash2 className='text-red-600/80'/>Delete Account</button>
+                <button className='btn btn-error rounded-full btn-soft m-1 md:m-3' disabled={loading} onClick={handleDelete}><Trash2 className='text-red-600/80'/>Delete Account</button>
             </div>
         </div>
     </div>

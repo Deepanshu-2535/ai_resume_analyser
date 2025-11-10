@@ -32,6 +32,7 @@ const Home = ({setIsLoggedIn}) => {
             }
         }
         catch(error){
+            toast.error("Error Logging In");
             console.error(error);
         }
         finally{
@@ -87,5 +88,4 @@ const Home = ({setIsLoggedIn}) => {
     </div>
   )
 }
-
 export default Home

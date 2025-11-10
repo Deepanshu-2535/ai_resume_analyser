@@ -5,7 +5,7 @@ export async function getAuthDetails(req,res){
         res.status(200).json(authDetails);
     }
     catch(error){
-        res.status(500).json({message:"Internar Server Error"});
+        res.status(500).json({message:"Internal Server Error"});
         console.error(error);
     }
 }
@@ -41,12 +41,18 @@ export async function updateAuthDetails(req,res) {
 }
 
 export async function deleteAuthDetails(req,res) {
-    const {userId} = req.params;
-    const deletedNote = await Auth.findOneAndDelete({userId});
-    if(!deletedNote){
-        res.status(404).json({message:"User not found"});
+    try{
+        const {userId} = req.params;
+        const deletedUser = await Auth.findOneAndDelete({userId});
+        if(!deletedUser){
+            res.status(404).json({message:"User not found"});
+        }
+        else{
+            res.status(200).json(deletedUser);
+        }
     }
-    else{
-        res.status(200).json(deletedNote);
+    catch(error){
+        console.error(error);
+        res.status(500).json({message:"Internal Server Error"});
     }
 }
