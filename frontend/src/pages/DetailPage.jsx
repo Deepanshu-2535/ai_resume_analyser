@@ -31,10 +31,10 @@ const DetailPage = () => {
   },[userId,id])
   if(loading){
     return(
-      <div>
+      <div className='bg-gradient-to-br from-blue-100 to-pink-100 min-h-screen'>
         <Navbar/>
         <div className='p-10'>
-          <div className='p-10 rounded-3xl border-2 border-neutral-content/40 shadow-neutral-content/20 shadow-xl flex items-center justify-center py-30'>
+          <div className='bg-white p-10 rounded-3xl border-2 border-neutral-content/40 shadow-neutral-content/20 shadow-xl flex items-center justify-center py-30'>
             <div className='text-center'>
               <Ring/>
               <p className='text-primary/70 font-light'>Fetching Resumes...</p>
