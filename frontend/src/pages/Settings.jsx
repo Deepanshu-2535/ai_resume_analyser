@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
-import { Trash2,Eye,EyeOff } from 'lucide-react'
+import { Trash2,Eye,EyeOff, ArrowLeft } from 'lucide-react'
 import toast from 'react-hot-toast';
 import api from '../lib/axios';
-import { useNavigate, useParams } from 'react-router';
+import { useNavigate, useParams, Link } from 'react-router';
 const Settings = () => {
     const[curr,setCurr] = useState("");
     const [newpass,setNewpass] = useState("");
@@ -55,9 +55,10 @@ const Settings = () => {
         setNewvisible(v=>!v);
     }
   return (
-    <div>
+    <div className=' bg-gradient-to-br from-blue-100 to-pink-100'>
         <Navbar/>
-        <div className='p-5 md:p-15 bg-gradient-to-br from-blue-100 to-pink-100'>
+         <div><Link to={`/dashboard/${userId}`}><button className='btn btn-ghost text-primary text-lg m-3 md:mb-0 md:ml-15 md:m-5'><ArrowLeft/> Back to resumes</button></Link></div>
+        <div className='pt-3 p-3 md:p-15'>
             <div className='bg-white p-10 md:p-20 rounded-3xl border-2 border-neutral-content/40 shadow-neutral-content/20 shadow-xl'>
                 <h3 className='text-2xl text-primary text-left font-bold'>Change Password</h3>
                 <div className='divider'></div>

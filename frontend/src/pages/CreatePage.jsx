@@ -1,9 +1,9 @@
 import React, { useState, useCallback } from 'react'
 import {useDropzone} from 'react-dropzone'
-import {FileCheck, Upload} from 'lucide-react';
+import {FileCheck, Upload, ArrowLeft} from 'lucide-react';
 import api from '../lib/axios';
 import Navbar from '../components/Navbar'
-import { useNavigate, useParams } from 'react-router';
+import { useNavigate, useParams, Link } from 'react-router';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import toast from 'react-hot-toast';
 const fileToBase64 = (file) => new Promise((resolve, reject) => {
@@ -72,9 +72,10 @@ const CreatePage = () => {
     )
   }
   return (
-    <div>
-      <div className='navbar h-25 text-3xl font-semibold text-black text-center bg-white shadow-2xl flex items-center justify-center py-6'>Upload Your Resume</div>
-      <div className='py-5 p-3 md:p-10 bg-gradient-to-br from-blue-100 to-pink-100 min-h-screen'>
+    <div className='bg-gradient-to-br from-blue-100 to-pink-100 min-h-screen'>
+      <div className='navbar h-25 text-3xl font-semibold text-black text-center bg-white shadow-sm flex items-center justify-center py-6'>Upload Your Resume</div>
+      <div><Link to={`/dashboard/${userId}`}><button className='btn btn-ghost text-primary text-lg m-3 md:mb-0 md:ml-15 md:m-5'><ArrowLeft/> Back to resumes</button></Link></div>
+      <div className='pt-3 p-3 md:p-15'>
         <div className='px-5 py-3 md:p-5 rounded-2xl bg-white border-2 border-neutral-content/20 shadow-neutral-content/20 shadow-xl text-primary'>
           <div className='flex items-center justify-center my-5'>
             <div className='flex items-center justify-between w-full  md:w-[60%] lg:w-[40%]'>
