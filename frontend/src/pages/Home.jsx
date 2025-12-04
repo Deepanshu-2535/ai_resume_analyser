@@ -67,7 +67,7 @@ const Home = ({setIsLoggedIn}) => {
                     <label className='label mb-1 font-[montserrat] text-sm'>Password</label>
                     <br />
                     <div className='input focus:border-0 mb-10 rounded-full w-full md:w-xs'>
-                        <input type={visible?"text":"password"} className='input focus:border-none focus:outline-none' onChange={(e)=>setPassword(e.target.value)}/>
+                        <input type={visible?"text":"password"} onChange={(e)=>setPassword(e.target.value)}/>
                         <div>
                             <button className='btn btn-ghost btn-circle hover:bg-base-200/60 hover:border-0 hover:outline-0' onClick={toggleVisibility}>
                                 {visible?<EyeOff className='text-base-content/50 m-0'/>:<Eye className='text-base-content/50 m-0'/>}

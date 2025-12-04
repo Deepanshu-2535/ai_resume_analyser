@@ -20,7 +20,7 @@ const DetailPage = () => {
         setResume(res.data);
       }
       catch(error){
-        toast.error("Error Fetching Notes");
+        toast.error("Error Fetching Resumes");
         console.error(error);
       }
       finally{
@@ -102,7 +102,6 @@ const DetailPage = () => {
             </div>
           </div>
         </div>
-        
       </div>
     </div>
   )

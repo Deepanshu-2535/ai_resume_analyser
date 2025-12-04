@@ -24,7 +24,7 @@ const Dashboard = ({isLoggedIn}) => {
     async function getResumes(){
       try{
         const res = await api.get(`/resume/${userId}`)
-        setResumes(res.data);
+        setResumes(res.data.reverse());
       }
       catch(error){
         toast.error("Error Fetching Resumes");
@@ -50,8 +50,8 @@ const Dashboard = ({isLoggedIn}) => {
     return(
       <div>
         <Navbar/>
-        <div className='p-10 bg-gradient-to-br from-blue-100 to-pink-100'>
-          <div className='p-10 bg-white min-h-screen rounded-3xl border-2 border-neutral-content/40 shadow-neutral-content/20 shadow-xl flex items-center justify-center py-30'>
+        <div className='p-10 bg-gradient-to-br min-h-screen from-blue-100 to-pink-100'>
+          <div className='p-10 bg-white rounded-3xl border-2 border-neutral-content/40 shadow-neutral-content/20 shadow-xl flex items-center justify-center py-30'>
             <div className='text-center bg-white'>
               <Ring/>
               <p className='text-primary/70 font-light'>Fetching Resumes...</p>
@@ -80,7 +80,7 @@ const Dashboard = ({isLoggedIn}) => {
           <span className='ml-3 text-2xl font-semibold text-primary'>Your Saved Resumes</span>
           <div className='divider'></div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-            {resumes.map(resume=><ResumeCard key={resume._id} resume={resume} setResumes={setResumes}/>)}
+            {resumes.map(r=><ResumeCard key={r._id} resume={r} setResumes={setResumes}/>)}
           </div>
         </div>
       </div>
