@@ -31,17 +31,6 @@ export async function addResume(req,res) {
         console.error(error);
     }
 }
-export async function addScore(req,res) {
-    const{score,suggestions} = req.body;
-    try{
-        const updatedResume = await Resume.findByIdAndUpdate(req.params.id,{score,suggestions},{new:true});
-        res.status(200).json(updatedResume);
-    }
-    catch(error){
-        res.status(500).json("Internal Server Error");
-        console.error(error);
-    }
-}
 export async function deleteResume(req,res) {
     try{
         const deletedResume = await Resume.findByIdAndDelete(req.params.id);

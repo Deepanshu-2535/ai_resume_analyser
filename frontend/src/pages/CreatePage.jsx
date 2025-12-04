@@ -52,11 +52,10 @@ const CreatePage = () => {
   }
   if(processing){
     return(
-    <div>
+    <div className='bg-gradient-to-br from-blue-100 to-pink-100 min-h-screen'>
       <Navbar/>
-      <div className='divider'></div>
       <div className='p-5 md:p-15'>
-        <div className='p-10 md:p-30 rounded-2xl border-2 border-neutral-content/20 shadow-neutral-content/20 shadow-xl text-primary flex items-center justify-center'>
+        <div className='bg-white p-10 md:p-30 rounded-2xl border-2 border-neutral-content/20 shadow-md text-primary flex items-center justify-center'>
         <div>
           <DotLottieReact className='w-150 m-0'
             src="https://lottie.host/29d88a63-39a3-4b0d-9d6c-f2a7f27d4e83/3g30toMGfs.lottie"

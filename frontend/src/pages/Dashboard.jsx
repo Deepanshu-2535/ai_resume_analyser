@@ -15,11 +15,11 @@ const Dashboard = ({isLoggedIn}) => {
   const [userName,setUserName] = useState("");
   const[loading,setLoading] = useState(true);
   const navigate = useNavigate();
-/*   useEffect(()=>{
+  useEffect(()=>{
     if(!isLoggedIn){
       navigate('/')
     }
-  },[userId]) */
+  },[userId])
   useEffect(()=>{
     async function getResumes(){
       try{
